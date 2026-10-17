@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#251126">
+  <meta name="description" content="Sevgan insoningiz uchun shaxsiy romantik havola yarating.">
+  <title>Faqat sen uchun ♡</title>
+  <style>
+    :root{color-scheme:dark;--cream:#fff4f3;--pink:#ff93b9;--pink2:#ffbfd1;--muted:#e9cedf;--border:rgba(255,225,241,.23);--glass:rgba(64,26,62,.43);--shadow:0 28px 110px rgba(27,5,31,.47)}
+    *,*::before,*::after{box-sizing:border-box}
+    html{min-height:100%;scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;min-height:100dvh;overflow-x:hidden;background:#211026;color:var(--cream);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+    body::before{content:"";position:fixed;inset:-25%;z-index:-3;pointer-events:none;background:radial-gradient(ellipse at 25% 30%,#b94880 0%,transparent 34%),radial-gradient(ellipse at 76% 26%,#794d9d 0%,transparent 29%),radial-gradient(ellipse at 76% 80%,#b84275 0%,transparent 35%),linear-gradient(135deg,#2e1736,#241026 55%,#411d43);filter:saturate(1.08);animation:breathing 17s ease-in-out infinite alternate}
+    body::after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.4;background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 180 180%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.6%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%22.12%22/%3E%3C/svg%3E')}
+    .glow{position:fixed;pointer-events:none;z-index:-1;filter:blur(3px);border-radius:999px;opacity:.48;animation:drift 11s ease-in-out infinite alternate}
+    .glow.one{width:270px;height:270px;top:4%;left:-110px;background:radial-gradient(circle,#ff80b35d,transparent 70%)}
+    .glow.two{width:400px;height:400px;right:-170px;bottom:-90px;background:radial-gradient(circle,#e58ac25a,transparent 70%);animation-delay:-5s}
+    .shell{position:relative;z-index:1;min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:calc(28px + env(safe-area-inset-top)) 18px calc(28px + env(safe-area-inset-bottom))}
+    .brand{position:relative;z-index:4;display:flex;align-items:center;gap:10px;margin-bottom:25px;color:#ffe7ed;text-decoration:none;font-size:13px;letter-spacing:.18em;font-weight:700}
+    .brand-mark{display:grid;place-items:center;width:32px;height:32px;border-radius:11px;background:#ffb3ca29;border:1px solid #ffc5d05c;font-size:20px;letter-spacing:0}
+    .card{position:relative;z-index:3;width:min(100%,540px);padding:clamp(27px,6.5vw,57px);border:1px solid var(--border);border-radius:34px;background:linear-gradient(156deg,rgba(255,226,241,.18),rgba(63,27,65,.39) 42%,rgba(45,20,50,.51));box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.18);backdrop-filter:blur(23px);-webkit-backdrop-filter:blur(23px);text-align:center;isolation:isolate;animation:rise .7s cubic-bezier(.2,.7,.15,1) both}
+    .card::before{content:"";position:absolute;inset:1px;border-radius:inherit;pointer-events:none;background:linear-gradient(140deg,#fff3 0%,transparent 28%)}
+    .eyebrow{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;margin:0 0 18px;padding:8px 14px;border:1px solid #f4c2da41;border-radius:100px;background:#f5b6d51c;color:#ffe0ec;font-size:10px;letter-spacing:.19em;text-transform:uppercase;font-weight:800}
+    .eyebrow .dot{width:5px;height:5px;border-radius:50%;background:#ff99bd;box-shadow:0 0 12px #ff91bc}
+    .hero{width:90px;height:90px;display:grid;place-items:center;margin:0 auto 18px;border-radius:31px;background:linear-gradient(135deg,#f9d4e030,#ec74ad24);border:1px solid #ffdce565;box-shadow:inset 0 1px 0 #ffffff4d,0 18px 38px #320d3240;animation:floatHeart 3.2s ease-in-out infinite}
+    .hero .ios{width:56px;height:56px}.hero{font-size:47px}
+    h1{position:relative;margin:0 auto 13px;max-width:440px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(35px,6vw,55px);font-weight:500;line-height:1.14;letter-spacing:-.04em;text-wrap:balance}
+    .highlight{color:#ffc2d6;font-style:italic}
+    .sub{max-width:390px;margin:0 auto 25px;color:#f0d3e2;font-size:14px;line-height:1.85;letter-spacing:.006em}
+    .field-label{display:block;text-align:left;color:#fff0f4;font-size:13px;font-weight:700;margin-bottom:10px}
+    form{text-align:left}
+    .input-wrap{position:relative}
+    .input-wrap svg{position:absolute;left:17px;top:50%;transform:translateY(-50%);color:#ffe5f0a6;pointer-events:none}
+    input{width:100%;min-height:58px;padding:15px 18px 15px 48px;color:#fff;font-size:16px;font-weight:550;font-family:inherit;background:rgba(30,11,36,.52);border:1px solid #ffc6dc59;border-radius:17px;outline:none;transition:border-color .2s,box-shadow .2s}
+    input::placeholder{color:#d9b8cb9c;font-weight:400}
+    input:focus{border-color:#ffc4d7;box-shadow:0 0 0 4px #ffbcd127}
+    .hint{color:#f2ccd9b0;font-size:11px;margin:10px 2px 20px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;width:100%;min-height:56px;padding:13px 20px;border:0;border-radius:16px;font-family:inherit;font-size:15px;font-weight:700;line-height:1.25;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s;touch-action:manipulation;user-select:none;-webkit-tap-highlight-color:transparent}
+    .btn:focus-visible,.ghost:focus-visible,.text-action:focus-visible{outline:3px solid #ffcee2;outline-offset:4px}
+    .btn:active{transform:scale(.975)}
+    .primary{background:linear-gradient(110deg,#ffe2e9,#ffb4cf);color:#692745;box-shadow:0 14px 34px #e6578a3c}
+    .primary:hover{box-shadow:0 17px 40px #ed5b9690;transform:translateY(-2px)}
+    .secondary{background:#fff1f31c;color:#fff0f5;border:1px solid #ffe6ef55}
+    .secondary:hover{background:#fff1f330}
+    .foot{margin:23px 0 0;color:#ecd1e0ad;font-size:11px;letter-spacing:.015em}
+    .stage{display:none}
+    .stage.active{display:block;animation:rise .45s ease both}
+    .link-panel{margin:22px 0 13px;padding:14px;text-align:left;border:1px solid #ffcce24d;border-radius:16px;background:#1c10254f;overflow:hidden}
+    .link-caption{display:block;font-size:10px;font-weight:800;letter-spacing:.14em;color:#ffc6dbbb;text-transform:uppercase;margin-bottom:9px}
+    #generatedLink{display:block;color:#fff0f4;line-height:1.5;font-size:13px;overflow-wrap:anywhere;word-break:break-all;text-decoration:none}
+    .action-row{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:12px}
+    .text-action{margin:20px auto 0;background:none;border:0;color:#ffe7ef;text-decoration:underline;text-underline-offset:5px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600}
+    .info{margin-top:12px;color:#fce4ee;line-height:1.55;font-size:12px;min-height:1.6em}
+    .notice{margin-top:17px;padding:12px 14px;border-radius:12px;background:#f1c2cd21;border:1px solid #f5cad342;font-size:12px;color:#ffe3e9;text-align:left;line-height:1.6}
+    .love-actions{position:relative;display:flex;align-items:center;justify-content:center;gap:14px;min-height:66px;margin-top:30px}
+    .love-actions .btn{width:auto;min-width:138px;border-radius:100px;min-height:56px}
+    #noBtn{background:#5f366d;color:#fff3fa;border:1px solid #f4d4ef42;box-shadow:0 10px 25px #150d2590;touch-action:none}
+    #yesBtn{position:relative;z-index:2;box-shadow:0 9px 37px #eb79a261}
+    #noBtn.floating{position:fixed;z-index:30;margin:0;transition:left .17s cubic-bezier(.2,.75,.3,1),top .17s cubic-bezier(.2,.75,.3,1);max-width:calc(100vw - 36px)}
+    .caption{margin:17px 0 0;color:#ffdae6ba;font-size:12px;min-height:18px}
+    .mini-link{display:inline-block;margin-top:18px;color:#ffe2ed;text-decoration:none;font-size:12px;opacity:.8}
+    .mini-link:hover{opacity:1;text-decoration:underline}
+    .ios{display:inline-flex;align-items:center;justify-content:center;width:1.13em;height:1.13em;vertical-align:-.17em;line-height:1;flex:none}.ios img{display:block;width:100%;height:100%;object-fit:contain}
+    /* Small Apple-emoji garlands for every stage */
+    .emoji-strand{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;margin:-3px auto 19px;min-height:24px}
+    .emoji-strand .ios{width:21px;height:21px;opacity:.89;filter:drop-shadow(0 3px 8px #ffa3c760);animation:emojiWiggle 3s ease-in-out infinite}
+    .emoji-strand .ios:nth-child(2n){animation-delay:-1.4s;transform:translateY(4px)}
+    .emoji-strand .ios:nth-child(3n){animation-delay:-.5s}
+    .emojis{display:flex;align-items:center;justify-content:center;gap:7px;font-size:34px;flex-wrap:wrap;margin-top:5px}
+    .emojis .ios:nth-child(2n){animation:emojiWiggle 2.7s ease-in-out infinite alternate}
+    .sparkle{position:fixed;z-index:29;pointer-events:none;width:23px;height:23px;animation:sparkleFly .65s cubic-bezier(.2,.8,.45,1) forwards;filter:drop-shadow(0 0 7px #ffa8c8)}
+    .sparkle .ios{width:100%;height:100%}
+    @keyframes emojiWiggle{0%,100%{translate:0 0;rotate:-8deg}50%{translate:0 -6px;rotate:9deg}}
+    @keyframes sparkleFly{0%{transform:translate(0,0) scale(.65);opacity:0}16%{opacity:1}100%{transform:translate(var(--sx),var(--sy)) scale(1.25);opacity:0}}
+    .emojis .ios{width:1em;height:1em}
+    .burst{position:fixed;left:0;bottom:-52px;z-index:6;pointer-events:none;animation:heartUp var(--dur,5s) linear forwards;will-change:transform,opacity}
+    #ambientLayer{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+    .ambient{position:absolute;z-index:0;pointer-events:none;opacity:.24;animation:ambientFloat var(--dur,14s) linear infinite;filter:drop-shadow(0 10px 20px #3a123b)}
+    .ambient .ios{width:100%;height:100%}
+    #confetti{position:fixed;inset:0;z-index:5;pointer-events:none;overflow:hidden}
+    .confetti{position:absolute;top:-12px;width:8px;height:13px;border-radius:3px;opacity:0;animation:confettiDrop var(--dur,3s) ease-in forwards}
+    .signature{margin-top:12px;text-align:center;color:#ffdbebae;font-family:Georgia,serif;font-style:italic;font-size:14px}
+    @keyframes breathing{to{transform:translate3d(3%,2%,0) rotate(4deg)}}
+    @keyframes drift{to{transform:translate(35px,-25px)}}
+    @keyframes rise{from{transform:translateY(18px);opacity:0}to{transform:translateY(0);opacity:1}}
+    @keyframes floatHeart{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-9px) rotate(4deg)}}
+    @keyframes heartUp{0%{opacity:0;transform:translate3d(0,0,0) rotate(-15deg) scale(.75)}12%{opacity:.95}80%{opacity:.9}100%{opacity:0;transform:translate3d(var(--dx,20px),-115vh,0) rotate(35deg) scale(1.25)}}
+    @keyframes ambientFloat{0%{transform:translateY(110vh) rotate(-9deg)}100%{transform:translateY(-40vh) rotate(20deg)}}
+    @keyframes confettiDrop{0%{opacity:0;transform:translateY(-10px) rotate(0)}6%{opacity:1}100%{opacity:0;transform:translateY(110vh) rotate(760deg)}}
+    @media(max-width:520px){.shell{padding-left:15px;padding-right:15px}.brand{margin-bottom:20px}.card{padding:29px 23px 34px;border-radius:27px}.hero{width:78px;height:78px;margin-bottom:17px;border-radius:28px}.hero .ios{width:49px;height:49px}h1{font-size:clamp(34px,8.8vw,47px)}.sub{font-size:13px;line-height:1.75}.love-actions{gap:12px}.love-actions .btn{min-width:114px;padding:12px 19px}.action-row .btn{padding:10px 10px;font-size:13px}.eyebrow{font-size:9px}}
+    @media(max-width:520px){.emoji-strand{gap:9px;margin-bottom:16px}.emoji-strand .ios{width:19px;height:19px}.emojis{gap:5px;font-size:29px}}
+    @media(max-width:370px){.card{padding:24px 17px 29px}.love-actions .btn{min-width:100px}.action-row{grid-template-columns:1fr}.shell{padding-left:10px;padding-right:10px}h1{font-size:32px}}
+    @media(max-height:620px){.shell{justify-content:flex-start}.brand{margin-bottom:13px}.hero{width:65px;height:65px;margin-bottom:10px}.hero .ios{width:40px;height:40px}.card{padding-top:22px;padding-bottom:22px}.eyebrow{margin-bottom:11px}.love-actions{margin-top:13px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.ambient,.burst,.confetti,.sparkle{display:none}}
+  </style>
+</head>
+<body>
+  <div class="glow one" aria-hidden="true"></div><div class="glow two" aria-hidden="true"></div>
+  <div id="ambientLayer" aria-hidden="true"></div><div id="confetti" aria-hidden="true"></div>
+  <main class="shell">
+    <a class="brand" href="./" id="homeBrand"><span class="brand-mark">♡</span> ONLY FOR YOU</a>
+    <section class="card" aria-live="polite">
+      <div class="stage" id="createStage">
+        <p class="eyebrow"><span class="dot"></span> LITTLE LOVE LETTER</p>
+        <div class="hero" aria-hidden="true" data-emoji="💌"></div>
+        <div class="emoji-strand" aria-hidden="true" data-strand="💗,✨,🥰,✨,💖"></div>
+        <h1>Bir ism. <span class="highlight">Mingta his.</span></h1>
+        <p class="sub">Yuragingizdagi insonga kichkina syurpriz tayyorlang. Ismini yozing, shaxsiy havolani yuboring va tabassumini kuting.</p>
+        <form id="nameForm" autocomplete="off">
+          <label class="field-label" for="personName">Kimga yuboramiz?</label>
+          <div class="input-wrap"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><input id="personName" type="text" maxlength="40" placeholder="Masalan, Madina" required spellcheck="false" autocomplete="off" enterkeyhint="go" /></div>
+          <p class="hint">Bu ism savol va javobda ko‘rinadi.</p>
+          <button class="btn primary" type="submit">Maxsus havola yaratish <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="foot">♡ Sevgi oddiy so‘zlardan boshlanadi</p>
+      </div>
+      <div class="stage" id="shareStage">
+        <p class="eyebrow"><span class="dot"></span> YOUR LINK IS READY</p>
+        <div class="hero" aria-hidden="true" data-emoji="💝"></div>
+        <div class="emoji-strand" aria-hidden="true" data-strand="💌,💞,✨,💘,💗"></div>
+        <h1>Syurpriz <span class="highlight">tayyor!</span></h1>
+        <p class="sub" id="shareSubtitle"></p>
+        <div class="link-panel"><span class="link-caption">Shaxsiy havolangiz</span><a id="generatedLink" href="#" target="_blank" rel="noopener noreferrer"></a></div>
+        <button class="btn primary" id="copyBtn" type="button">Havolani nusxalash <span aria-hidden="true">⧉</span></button>
+        <div class="action-row"><button class="btn secondary" id="sendBtn" type="button">Yuborish <span aria-hidden="true">↗</span></button><button class="btn secondary" id="previewBtn" type="button">Ko‘rib chiqish <span aria-hidden="true">♡</span></button></div>
+        <p id="shareStatus" class="info" role="status" aria-live="polite"></p>
+        <div id="hostingNotice" class="notice" hidden>Hozir sayt kompyuteringizda lokal ochilgan. Havola boshqa odamda ishlashi uchun <b>saytni internetga joylash</b> kerak (masalan, GitHub Pages yoki Netlify).</div>
+        <button type="button" class="text-action" id="anotherBtn">← Yana bir ism uchun yaratish</button>
+      </div>
+      <div class="stage" id="questionStage">
+        <p class="eyebrow"><span class="dot"></span> A LITTLE QUESTION FOR YOU</p>
+        <div class="hero" aria-hidden="true" data-emoji="🥺"></div>
+        <div class="emoji-strand" aria-hidden="true" data-strand="💓,💕,🫶,💕,💓"></div>
+        <h1><span id="questionName" class="highlight"></span>, meni yaxshi <span class="highlight">ko‘rasanmi?</span></h1>
+        <p class="sub">Shoshilmay javob ber... yuraging allaqachon biladi. <span data-inline-emoji="💕"></span></p>
+        <div class="love-actions"><button class="btn primary" type="button" id="yesBtn">Ha <span data-inline-emoji="😍"></span></button><button class="btn" type="button" id="noBtn">Yo‘q <span data-inline-emoji="🙈"></span></button></div>
+        <p class="caption" id="playfulText">Birgina javob hammasini o‘zgartirishi mumkin...</p>
+        <a href="./" class="mini-link">♡ O‘zingiz ham havola yarating</a>
+      </div>
+      <div class="stage" id="resultStage">
+        <p class="eyebrow"><span class="dot"></span> YOU MAKE MY WORLD BRIGHTER</p>
+        <div class="hero" aria-hidden="true" data-emoji="🥰"></div>
+        <div class="emoji-strand" aria-hidden="true" data-strand="💗,🥹,💞,😘,💖"></div>
+        <h1><span id="resultName" class="highlight"></span>, men ham seni juda-juda <span class="highlight">yaxshi ko‘raman!</span></h1>
+        <p class="sub">Sen sabab oddiy kunlar ham ajoyib xotiraga aylanadi. Yaxshiyam borsan! <span data-inline-emoji="❤️"></span></p>
+        <div class="emojis" id="resultEmojis" aria-label="Sevgi yurakchalari"></div>
+        <p class="signature">with all my heart ♡</p>
+        <a href="./" class="mini-link">♡ O‘zingiz ham havola yarating</a>
+      </div>
+    </section>
+  </main>
+  <script>
+  (()=>{
+    'use strict';
+    const $=id=>document.getElementById(id);
+    const stages=['createStage','shareStage','questionStage','resultStage'];
+    const emojiCodes={'💌':'1f48c','💝':'1f49d','🥺':'1f97a','😍':'1f60d','🙈':'1f648','🥰':'1f970','💕':'1f495','💖':'1f496','💗':'1f497','❤️':'2764-fe0f','✨':'2728','💞':'1f49e','💘':'1f498','💓':'1f493','🫶':'1faf6','🥹':'1f979','😘':'1f618','💋':'1f48b','💟':'1f49f','💐':'1f490','🌸':'1f338','🩷':'1fa77'};
+    const emojiBase='https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.1.2/img/apple/64/';
+    function emoji(char){const holder=document.createElement('span');holder.className='ios';holder.setAttribute('role','img');holder.setAttribute('aria-label',char);holder.textContent=char;const el=new Image();el.alt='';el.decoding='async';el.onload=()=>{if(holder.isConnected)holder.replaceChildren(el);};el.src=emojiBase+(emojiCodes[char]||'2764-fe0f')+'.png';return holder;}
+    document.querySelectorAll('[data-emoji]').forEach(el=>el.append(emoji(el.dataset.emoji)));
+    document.querySelectorAll('[data-inline-emoji]').forEach(el=>el.append(emoji(el.dataset.inlineEmoji)));
+    document.querySelectorAll('[data-strand]').forEach(el=>el.dataset.strand.split(',').forEach(ch=>el.append(emoji(ch))));
+    for(const ch of ['💐','🩷','💖','💋','💞','🥰','✨'])$('resultEmojis').append(emoji(ch));
+    const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reducedMotion){const count=window.innerWidth<520?17:29;const shapes=['💕','💗','✨','💖','💞','💘','🌸','🩷'];for(let i=0;i<count;i++){const e=document.createElement('span');e.className='ambient';e.style.left=(3+Math.random()*91)+'%';e.style.bottom='0';e.style.width=(15+Math.random()*18)+'px';e.style.height=e.style.width;e.style.opacity=(.20+Math.random()*.29).toFixed(2);e.style.setProperty('--dur',(11+Math.random()*15)+'s');e.style.animationDelay=(-Math.random()*24)+'s';e.append(emoji(shapes[i%shapes.length]));$('ambientLayer').append(e);}}
+    function show(id){for(const stage of stages){const el=$(stage);el.classList.toggle('active',stage===id);el.setAttribute('aria-hidden',String(stage!==id));}if(id!=='questionStage'){noBtn.classList.remove('floating');noBtn.style.left='';noBtn.style.top='';noBtn.style.display='';document.querySelector('.love-actions').appendChild(noBtn);}document.title=id==='createStage'?'Faqat sen uchun ♡':'Bir savolim bor ♡';}
+    // All names become text nodes only; URL parameters never become HTML.
+    const cleanName=(s)=>String(s||'').replace(/[\u0000-\u001F\u007F]/g,'').trim().replace(/\s+/g,' ').slice(0,40);
+    const params=new URLSearchParams(location.search);
+    let recipient=cleanName(params.get('to'));
+    const noBtn=$('noBtn');
+    let escapes=0, generatedUrl='', lastEscapeAt=0;
+    function resetNo(){noBtn.classList.remove('floating');noBtn.style.left='';noBtn.style.top='';document.querySelector('.love-actions').appendChild(noBtn);escapes=0;}
+    function displayQuestion(name){recipient=name;$('questionName').textContent=name;$('resultName').textContent=name;$('playfulText').textContent='Birgina javob hammasini o‘zgartirishi mumkin...';resetNo();show('questionStage');}
+    if(recipient){displayQuestion(recipient);}else{show('createStage');}
+    function createUrl(name){const u=new URL(location.href);u.search='';u.hash='';u.searchParams.set('to',name);return u.href;}
+    $('nameForm').addEventListener('submit',(ev)=>{ev.preventDefault();const name=cleanName($('personName').value);if(!name){$('personName').focus();return;}recipient=name;generatedUrl=createUrl(name);$('generatedLink').textContent=generatedUrl;$('generatedLink').href=generatedUrl;$('shareSubtitle').textContent=name+' uchun maxsus havola yaratildi. Uni yuboring va qanday javob berishini ko‘ring!';$('shareStatus').textContent='';$('hostingNotice').hidden=!(location.protocol==='file:'||/^(localhost|127\.0\.0\.1|0\.0\.0\.0|\[::1\])$/.test(location.hostname)||/^(192\.168\.|10\.|172\.(1[6-9]|2\d|3[01])\.)/.test(location.hostname));show('shareStage');});
+    async function copyUrl(){let ok=false;try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(generatedUrl);ok=true;}}catch(_e){}if(!ok){const field=document.createElement('textarea');field.value=generatedUrl;field.style.position='fixed';field.style.opacity='0';field.style.top='0';document.body.append(field);field.select();try{ok=document.execCommand('copy');}catch(_e){}field.remove();}if(ok){$('shareStatus').textContent='Havola nusxalandi! Endi uni yuborishingiz mumkin. ♡';$('copyBtn').firstChild.textContent='Nusxalandi! ';}else{$('shareStatus').textContent='Havolani yuqoridan belgilab, qo‘lda nusxalang.';}}
+    $('copyBtn').addEventListener('click',copyUrl);
+    $('sendBtn').addEventListener('click',async()=>{if(navigator.share){try{await navigator.share({title:'Senga bir savolim bor ♡',text:recipient+', senga bitta savolim bor... ♡',url:generatedUrl});$('shareStatus').textContent='Havola ulashish oynasiga yuborildi.';}catch(e){if(e.name!=='AbortError')$('shareStatus').textContent='Ulashish amalga oshmadi, nusxalashni sinab ko‘ring.';}}else{window.open('https://t.me/share/url?url='+encodeURIComponent(generatedUrl)+'&text='+encodeURIComponent(recipient+', senga bitta savolim bor... ♡'),'_blank','noopener,noreferrer');}});
+    $('previewBtn').addEventListener('click',()=>{history.pushState({},'',generatedUrl);displayQuestion(recipient);});
+    $('anotherBtn').addEventListener('click',()=>{$('personName').value='';$('copyBtn').firstChild.textContent='Havolani nusxalash ';$('shareStatus').textContent='';show('createStage');$('personName').focus();});
+    // The button runs in TWO dimensions, with a minimum horizontal AND vertical jump.
+    // Coordinates are CSS viewport pixels; always keep the whole button on screen.
+    function bounds(){const v=window.visualViewport;return{left:v?v.offsetLeft:0,top:v?v.offsetTop:0,width:v?v.width:window.innerWidth,height:v?v.height:window.innerHeight};}
+    function rangeNo(){const a=bounds(),pad=18,w=noBtn.offsetWidth,h=noBtn.offsetHeight;return{minX:a.left+pad,maxX:Math.max(a.left+pad,a.left+a.width-w-pad),minY:a.top+pad,maxY:Math.max(a.top+pad,a.top+a.height-h-pad),w,h};}
+    const between=(min,max)=>min+Math.random()*Math.max(0,max-min);
+    function clampNo(){if(!noBtn.classList.contains('floating'))return;const a=rangeNo();const x=parseFloat(noBtn.style.left),y=parseFloat(noBtn.style.top);noBtn.style.left=Math.max(a.minX,Math.min(a.maxX,Number.isFinite(x)?x:a.minX))+'px';noBtn.style.top=Math.max(a.minY,Math.min(a.maxY,Number.isFinite(y)?y:a.minY))+'px';}
+    function escapeSparkles(rect){if(reducedMotion)return;for(let i=0;i<3;i++){const p=document.createElement('span');p.className='sparkle';p.style.left=(rect.left+rect.width/2-11)+'px';p.style.top=(rect.top+rect.height/2-11)+'px';p.style.setProperty('--sx',(Math.random()*130-65)+'px');p.style.setProperty('--sy',(Math.random()*100-50)+'px');p.append(emoji(['💗','✨','💖'][i]));document.body.append(p);setTimeout(()=>p.remove(),700);}}
+    function runaway(ev){
+      if(!$('questionStage').classList.contains('active'))return;
+      if(ev&&ev.cancelable&&ev.type==='pointerdown')ev.preventDefault();
+      if(Date.now()-lastEscapeAt<170)return;
+      lastEscapeAt=Date.now();
+      const previous=noBtn.getBoundingClientRect();
+      if(!noBtn.classList.contains('floating')){
+        noBtn.classList.add('floating');document.body.appendChild(noBtn);
+        noBtn.style.width=Math.ceil(previous.width)+'px';
+        noBtn.style.left=previous.left+'px';noBtn.style.top=previous.top+'px';
+      }
+      const a=rangeNo();
+      const curX=previous.left,curY=previous.top;
+      const spanX=a.maxX-a.minX,spanY=a.maxY-a.minY;
+      // On 320px-wide screens the thresholds automatically shrink to fit.
+      const jumpX=Math.min(115,spanX*.37),jumpY=Math.min(105,spanY*.32);
+      const yes=$('yesBtn').getBoundingClientRect();
+      let options=[];
+      for(let i=0;i<85;i++){
+        const x=between(a.minX,a.maxX),y=between(a.minY,a.maxY);
+        const overlaps=!(x+a.w+12<yes.left||x-12>yes.right||y+a.h+12<yes.top||y-12>yes.bottom);
+        if(!overlaps&&Math.abs(x-curX)>=jumpX&&Math.abs(y-curY)>=jumpY)options.push({x,y});
+        if(options.length>=7)break;
+      }
+      // Fallback favors the opposite diagonal corner, not a horizontal-only jump.
+      if(!options.length){for(const x of [a.minX,a.maxX])for(const y of [a.minY,a.maxY]){
+        const overlaps=!(x+a.w+12<yes.left||x-12>yes.right||y+a.h+12<yes.top||y-12>yes.bottom);
+        if(!overlaps)options.push({x,y});
+      }}
+      const pick=options.length?options[Math.floor(Math.random()*options.length)]:{x:Math.abs(curX-a.minX)>Math.abs(curX-a.maxX)?a.minX:a.maxX,y:Math.abs(curY-a.minY)>Math.abs(curY-a.maxY)?a.minY:a.maxY};
+      // Disable interpolation on first placement; otherwise the button flies across both axes.
+      noBtn.style.left=Math.max(a.minX,Math.min(a.maxX,pick.x))+'px';
+      noBtn.style.top=Math.max(a.minY,Math.min(a.maxY,pick.y))+'px';
+      escapeSparkles(previous);
+      escapes++;
+      const phrases=['Voy, tutolmadingiz! 💕','Bu tugma juda uyatchan... ✨','Yuqoriga ham qochaman! 💗','Pastga ham qochaman! 💖','«Ha» tugmasi kutyapti! 🥰','Sevgi baribir g‘olib! ❤️'];
+      $('playfulText').textContent=phrases[(escapes-1)%phrases.length];
+    }
+    noBtn.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'||e.pointerType==='pen')runaway(e);});
+    noBtn.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')runaway(e);});
+    noBtn.addEventListener('click',runaway);
+    noBtn.addEventListener('focus',()=>{ /* keyboard users can choose the playful No option */ });
+    window.addEventListener('resize',clampNo);window.addEventListener('orientationchange',()=>requestAnimationFrame(clampNo));if(window.visualViewport){window.visualViewport.addEventListener('resize',clampNo);window.visualViewport.addEventListener('scroll',clampNo);}
+    function heartBurst(){if(reducedMotion)return;for(let i=0;i<90;i++){setTimeout(()=>{const h=document.createElement('span');h.className='burst';h.style.left=Math.random()*100+'vw';h.style.fontSize=(14+Math.random()*31)+'px';h.style.setProperty('--dx',(Math.random()*150-75)+'px');h.style.setProperty('--dur',(3+Math.random()*3.5)+'s');h.append(emoji(['❤️','💗','💕','💖','✨','💞','💘','🌸','🩷'][Math.floor(Math.random()*9)]));document.body.append(h);setTimeout(()=>h.remove(),6800);},i*35);}for(let i=0;i<70;i++){const e=document.createElement('i');e.className='confetti';e.style.left=Math.random()*100+'%';e.style.background=['#ffc4d9','#ffdca8','#d3b5fa','#ff90b9','#ffffff'][i%5];e.style.setProperty('--dur',(2.2+Math.random()*2.4)+'s');e.style.animationDelay=(Math.random()*.85)+'s';$('confetti').append(e);setTimeout(()=>e.remove(),5500);}}
+    $('yesBtn').addEventListener('click',()=>{show('resultStage');heartBurst();});
+    window.addEventListener('popstate',()=>{const value=cleanName(new URLSearchParams(location.search).get('to'));if(value)displayQuestion(value);else show('createStage');});
+  })();
+  </script>
+</body>
+</html>
